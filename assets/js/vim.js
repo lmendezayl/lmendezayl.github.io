@@ -17,30 +17,34 @@ document.onkeydown = function(e) {
   }
 
   // NEXT/PREV PAGE
-  else if (e.keyCode == 76){ // l, next
+  else if (e.keyCode == 76){ // si presionás 'l', vamos a la siguiente página
     var title;
-    var url = document.location.href;
+    var url = document.location.href; // obtenemos la url actual
     if (url.includes("blog")){
-        title = "blog";
+        title = "blog"; // si la url tiene "blog", entonces asignamos el título como "blog"
     } else {
+        // si no es un blog, tomamos la última parte de la url (quitando el ".html") como título
         title = url.split("/").slice(-1)[0].replace(".html", "");
     }
-    var index = pages.indexOf(title);
-	if(index == -1) index = 0;
-    var newindex = pages[(index + 1) % pages.length];
-    window.location.href = home + newindex;
-  }
-  else if (e.keyCode == 72){ // h, prev
+    
+    var index = pages.indexOf(title); // buscamos la página actual en el array 'pages'
+	if(index == -1) index = 0; // si no la encuentra, la ponemos en el primer índice (0)
+    var newindex = pages[(index + 1) % pages.length]; // calculamos el índice de la siguiente página (circular)
+    window.location.href = home + newindex; // redirigimos a la nueva página
+}
+  else if (e.keyCode == 72){ // si presionás 'h', vamos a la página anterior
     var title;
-    var url = document.location.href;
+    var url = document.location.href; // obtenemos la url actual
     if (url.includes("blog")){
-        title = "blog";
+        title = "blog"; // si la url tiene "blog", asignamos el título como "blog"
     } else {
+        // si no es un blog, tomamos la última parte de la url como título (sin el ".html")
         title = url.split("/").slice(-1)[0].replace(".html", "");
     }
-    var index = pages.indexOf(title);
-	if(index == -1) index = 0;
-    var newindex = pages[(index - 1 + pages.length) % pages.length];
-    window.location.href = home + newindex;
+    
+    var index = pages.indexOf(title); // buscamos la página actual en el array 'pages'
+	if(index == -1) index = 0; // si no la encuentra, la ponemos en el primer índice (0)
+    var newindex = pages[(index - 1 + pages.length) % pages.length]; // calculamos el índice de la página anterior (circular)
+    window.location.href = home + newindex; // redirigimos a la nueva página
   }
 };
