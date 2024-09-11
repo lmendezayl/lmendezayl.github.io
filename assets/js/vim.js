@@ -1,10 +1,10 @@
 var pos = 0;
 var jump = 250;
-var pages = ["", "publications", "projects", "experience", "blog", "misc"]
+var pages = ["", "projects.html", "experience.html", "blog", "misc.html"]
 
 document.onkeydown = function(e) {
   e = e || window.event;
-  var home = "https://www.sysnet.ucsd.edu/~abellon/";
+  var home = "https://lmendezayl.github.io/";
 
   // UP AND DOWN SCROLLING
   if (e.keyCode == 74){ // j, down
