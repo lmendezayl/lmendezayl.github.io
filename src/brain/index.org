@@ -1,8 +1,0 @@
-#+TITLE: brain
-
-- art
-
-- computer
-
-  - operating-systems
-    - [[file:computer/operating-systems/android.org][android]]

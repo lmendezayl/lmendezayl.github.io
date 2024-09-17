@@ -1,9 +1,0 @@
-#+TITLE: experience | lau mendez
-#+OPTIONS: title:nil
-
-#+HTML: <div id="experience" class="main">
-#+HTML: <div class="contentBlock">
-
-** [[https://www.mpi-sp.org/][research intern, max planck institute for security and privacy]]
-*** [Fall 2023]
-I worked on rehosting firmware extracted from an embedded device to be able to run it with a fuzzer. I used Ghidra, C/C++, and fuzzware.
