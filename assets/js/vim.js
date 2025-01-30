@@ -1,5 +1,5 @@
 var pos = 0;
-var jump = 250;
+var jump = 55;
 var pages = ["", "projects.html", "experience.html", "blog", "misc.html"]
 
 document.onkeydown = function(e) {
