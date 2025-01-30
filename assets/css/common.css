@@ -99,7 +99,7 @@ h2 {
     text-align: center;
     padding: 5px 0px;
     z-index: 5;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .footer li a {
@@ -130,7 +130,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    font-size: 22px;
+    font-size: 15px;
     z-index: 5;
     list-style: none;
     padding: 0;
@@ -139,4 +139,19 @@ h2 {
     top: 0;
     min-height: 30px;
     text-align: center;
+}
+
+.copiable {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.copiable:hover {
+    background: #5555cc;
+}
+
+.copiado {
+    background: #09095a !important;
 }
