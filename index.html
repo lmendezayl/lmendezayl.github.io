@@ -41,23 +41,58 @@
                 <b>lautaro e. mendez (aka lmendezayl / roguesir)</b><br />
             </p>
 
+
             <p class="subtitle">
-                interested in math lore, math itself, prog music and collecting fridge magnets<br />
+                interested in math, machine learning, 4X videogames, prog music and fridge magnets<br />
             </p>
 
             <div class="intro">
                 <p>
-                    im a third year data science undergrad student at University of Buenos Aires. most of the time im at
+                    third year <b>data science</b> undergrad student at University of Buenos Aires. most of the
+                    time im at
                     pabellon 1 or playing ping-pong during breaks with friends
                 </p>
                 <p>
-                    im currently on summer break, working in algotrading and backend python
+                    currently on summer break, working in algotrading and backend python
+                </p>
+                <p> 
+                    on the <b>projects</b> tab you will find some of the projects i worked on
                 </p>
                 <p>
-                    <!-- arreglar esto, esta re gaga no se como hacerlo-->
-                    you can contact me via email: lmendezayl@gmail.com, or linkedin
+                    feel free to contact me via any of the links below!
                 </p>
             </div>
+            <script>
+                function copyToClipboard(element, text) {
+                    navigator.clipboard.writeText(text)
+                        .then(() => {
+                            // Feedback visual
+                            element.classList.add('copiado');
+                            setTimeout(() => {
+                                element.classList.remove('copiado');
+                            }, 1000);
+
+                            // Opcional: Mostrar notificación
+                            const notification = document.createElement('div');
+                            notification.textContent = '✓ Copiado!';
+                            notification.style.position = 'fixed';
+                            notification.style.bottom = '20px';
+                            notification.style.right = '20px';
+                            notification.style.background = '#5555ff';
+                            notification.style.color = 'white';
+                            notification.style.padding = '10px';
+                            notification.style.borderRadius = '5px';
+                            document.body.appendChild(notification);
+
+                            setTimeout(() => {
+                                document.body.removeChild(notification);
+                            }, 2000);
+                        })
+                        .catch(err => {
+                            console.error('Error al copiar:', err);
+                        });
+                }
+            </script>
 
         </div>
     </div>
@@ -66,17 +101,23 @@
             <ul class='footer banner' style='margin-top:0px; margin-bottom:0px;'>
                 <span class='footer-container'>
                     <span>
-                        <li><a target='_parent' href='./cv.pdf'>cv</a></li>
+                        <li><a href='https://lmendezayl.github.io'>home</a></li>
                         <li><a target='_parent' href='https://github.com/lmendezayl/'>github</a></li>
                     </span>
                     <span>
-                        <li><a href='https://lmendezayl.github.io'>home</a></li>
-                        <li><a target='_parent' href='https://github.com/lmendezayl/lmendezayl.github.io'>website source</a>
+                        <li><a href='https://www.linkedin.com/in/lmendezayala/'>linkedin</a></li>
+                        <li><a target='_parent' href='https://www.youtube.com/@laumendezay'>youtube</a></li>
+                    </span>
+                    <span>
+                        <li><a target='_parent' href='./cv.pdf'>cv</a></li>
+                        <li><a target='_parent' href='https://github.com/lmendezayl/lmendezayl.github.io'>website
+                                source</a>
                         </li>
                     </span>
                 </span>
             </ul>
-        </div </div>
+        </div>
+    </div>
 </body>
 
 </html>
