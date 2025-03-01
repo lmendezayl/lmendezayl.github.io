@@ -17,19 +17,6 @@ body {
     font-size: 20px;
 }
 
-a,
-.comment a {
-    text-decoration-line: underline;
-    text-decoration-style: dotted;
-    color: #aaaaff;
-}
-
-a:hover,
-.comment a:hover {
-    color: #5555cc;
-    transition: .4s;
-}
-
 h2 {
     font-size: 27px;
     margin: 0;
