@@ -1,5 +1,5 @@
 h2 {
-    font-size: 27px;
+    font-size: 18px;
     margin: 0;
     
 }
@@ -38,7 +38,7 @@ h2 {
 }
 
 .comment {
-    font-size: 15px;
+    font-size: 18px;
     max-width: 1000px; 
     color: #707070;
     margin: 0; 
@@ -137,12 +137,11 @@ h2 {
 }
 
 .profile {
-    border-radius: 3px;
-    max-width: 300px;
+    max-width: 50%;
 }
 
 .subtitle {
-    font-size: 15px;
+    font-size: 18px;
     color: #9999ff;
     width: 70%;
     margin-right: auto; 
@@ -157,6 +156,5 @@ h2 {
     margin-right: auto; 
     margin-left: auto; 
     text-align: justify; 
-    margin-top: 20px;
 
 }
