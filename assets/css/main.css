@@ -30,11 +30,13 @@ h2 {
     border-radius: 5px;
 }
 
-.blog {
+.blog_posts {
     width: 70%;
     margin-right: auto;
     margin-left: auto;
+    text-align: left;
     max-width: 1000px;
+    font-size: 15px
 }
 
 .comment {
