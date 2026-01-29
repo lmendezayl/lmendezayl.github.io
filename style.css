@@ -615,14 +615,20 @@ footer {
     }
 
     /* Undo Desktop Full Screen constraints for mobile natural scroll */
+    /* Mobile Full Screen (One per page feel) */
     section {
-        min-height: auto;
-        padding: 4rem 0;
+        min-height: 100dvh;
+        /* Dynamic viewport height for mobile browsers */
+        padding: 4rem 1rem;
+        /* Horizontal padding for safety */
         height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     #contact {
-        min-height: auto;
+        min-height: 100dvh;
         padding-bottom: 6rem;
     }
 
