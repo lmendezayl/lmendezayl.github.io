@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Portfolio</title>
+    <meta name="description"
+        content="Portfolio of a Data Engineer & Scientist specializing in big data, pipelines, and analytics.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">Lautaro <span class="middle-name">Evaristo</span> Mendez</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Stack</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button class="theme-switch" aria-label="Toggle Dark/Light Mode">
+                        <div class="switch-handle"></div>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero">
+        <div class="hero-bg">
+            <div class="tech-circle circle-1"></div>
+            <div class="tech-circle circle-2"></div>
+            <div class="tech-circle circle-3"></div>
+            <!-- Math Additions -->
+            <div class="tech-circle circle-polar-1"></div>
+            <div class="tech-circle circle-polar-2"></div>
+            <div class="tech-circle circle-orbit-container">
+                <div class="orbit-dot"></div>
+            </div>
+        </div>
+        <div class="container">
+            <p class="overline">Hello, I'm <span class="highlight">Lautaro Mendez</span></p>
+            <h1>Data
+                <span class="highlight">
+                    <span class="rotating-text">
+                        <span>Engineer</span>
+                        <span>Scientist</span>
+                        <span>Engineer</span>
+                    </span>
+                </span>
+            </h1>
+            <p class="subtitle">Building scalable pipelines, transforming raw data into insights, and deploying ML
+                models.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn primary">View Work</a>
+                <a href="cv.pdf" class="btn secondary" target="_blank">View CV</a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down">
+            <!-- Simple SVG Arrow -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 13L12 18L17 13M7 6L12 11L17 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </a>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I am a Data Engineer and Scientist with experience in building robust data pipelines, process
+                            automation, and applied statistical analysis. I currently bridge the gap between complex
+                            data and actionable insights, ensuring data quality for strategic decision-making.</p>
+                        <p>Currently in my 5th year of a Data Science degree at the University of Buenos Aires. I have
+                            hands-on experience with Python, SQL, and Cloud platforms (AWS, GCP), working on projects
+                            ranging from ETL automation to ML model deployment.</p>
+                        <p>My goal is to continue growing in projects that integrate Data Engineering with operational
+                            analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2 class="section-title">Tech Stack</h2>
+                <div class="skills-grid">
+                    <!-- Languages -->
+                    <div class="skill-card">
+                        <div class="skill-icon">💻</div>
+                        <h3>Languages</h3>
+                        <p>Python (FastAPI, Pandas, Sklearn, PyTorch), SQL (SQLite, SQL Server), Java, Google Apps
+                            Script
+                        </p>
+                    </div>
+                    <!-- Cloud -->
+                    <div class="skill-card">
+                        <div class="skill-icon">☁️</div>
+                        <h3>Cloud & DevOps</h3>
+                        <p>AWS (EC2, Redshift), GCP (BigQuery, Cloud Run), Docker, Git</p>
+                    </div>
+                    <!-- Data Engineering -->
+                    <div class="skill-card">
+                        <div class="skill-icon">🔧</div>
+                        <h3>Data Engineering</h3>
+                        <p>ETL Pipelines, APIs (REST/SOAP), Github Actions, Databricks</p>
+                    </div>
+                    <!-- Analytics -->
+                    <div class="skill-card">
+                        <div class="skill-icon">📊</div>
+                        <h3>Analytics & Tools</h3>
+                        <p>Power BI, Looker Studio, Excel, Google Analytics, Postman</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="hero-bg">
+                <!-- Reusing the lighter circles for sections -->
+                <div class="tech-circle circle-orbit-container" style="left: -10vw; top: 10%;">
+                    <div class="orbit-dot"></div>
+                </div>
+                <div class="tech-circle circle-2" style="right: -5vw; top: 50%;"></div>
+            </div>
+            <div class="container">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="projects-grid">
+                    <!-- Project 1: Grupo Penna -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <div class="project-top">
+                                <div class="folder-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect width="8" height="8" x="3" y="3" rx="2" />
+                                        <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+                                        <rect width="8" height="8" x="13" y="13" rx="2" />
+                                    </svg>
+                                </div>
+                                <div class="project-links">
+                                    <!-- No link provided, keeping clean -->
+                                </div>
+                            </div>
+                            <h3>ETL Pipelines & Dockerization</h3>
+                            <p><strong>Grupo Penna</strong>: Developed and deployed ETL pipelines between external APIs
+                                and SQL Server using Python (FastAPI). Implemented and dockerized projects on AWS EC2,
+                                automating daily ETL processes.</p>
+                            <ul class="project-tech-list">
+                                <li>Python (FastAPI)</li>
+                                <li>AWS EC2</li>
+                                <li>Docker</li>
+                                <li>SQL Server</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Scale AI -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <div class="project-top">
+                                <div class="folder-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect width="18" height="12" x="3" y="6" rx="2" />
+                                        <path d="M9 14h6" />
+                                        <path d="M12 2v4" />
+                                        <circle cx="8" cy="10" r="1" />
+                                        <circle cx="16" cy="10" r="1" />
+                                    </svg>
+                                </div>
+                                <div class="project-links">
+                                    <!-- No link provided -->
+                                </div>
+                            </div>
+                            <h3>LLM Prompt Engineering</h3>
+                            <p><strong>Scale AI</strong>: Developed prompts for LLaMA 3 based LLMs, systematically
+                                evaluating response quality using Python and data analysis techniques to improve model
+                                performance.</p>
+                            <ul class="project-tech-list">
+                                <li>Python</li>
+                                <li>LLMs (LLaMA 3)</li>
+                                <li>Data Analysis</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: GFPrint -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <div class="project-top">
+                                <div class="folder-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                                        <polyline points="14 2 14 8 20 8" />
+                                        <line x1="16" x2="8" y1="13" y2="13" />
+                                        <line x1="16" x2="8" y1="17" y2="17" />
+                                        <polyline points="10 9 9 9 8 9" />
+                                    </svg>
+                                </div>
+                                <div class="project-links">
+                                    <!-- No link provided -->
+                                </div>
+                            </div>
+                            <h3>Billing Process Automation</h3>
+                            <p><strong>GFPrint</strong>: Automated billing and order management processes in Google
+                                Sheets using Apps Script, reducing execution time from minutes to seconds and
+                                eliminating manual errors.</p>
+                            <ul class="project-tech-list">
+                                <li>Google Apps Script</li>
+                                <li>Google Sheets</li>
+                                <li>Automation</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="hero-bg">
+                <div class="tech-circle circle-polar-1" style="left: auto; right: -20vw; top: -10vw;"></div>
+                <div class="tech-circle circle-1" style="width: 20vw; height: 20vw; left: 5%; top: 60%"></div>
+            </div>
+            <div class="container">
+                <h2 class="section-title">Personal Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project New: TMDB API -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <div class="project-top">
+                                <div class="folder-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M20.2 6 3 11l-.9-2.4c-.5-1.1.2-2.3 1.3-2.8l3.2-1.2c1.1-.5 2.3.2 2.8 1.3l.9 2.4" />
+                                        <path d="m6.2 5.3 3.1 3.9" />
+                                        <path d="m12.4 3.4 3.1 4" />
+                                        <path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" />
+                                    </svg>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/lmendezayl/TMDB-Top-5000-Movies-BackEnd" target="_blank"
+                                        aria-label="GitHub Link"><svg width="20" height="20" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                            </path>
+                                        </svg></a>
+                                </div>
+                            </div>
+                            <h3>TMDB Top 5000 Movies API</h3>
+                            <p><strong>Personal Project</strong>: End-to-End data engineering solution featuring a
+                                Medallion Architecture, automated ETL pipeline, and REST API. Includes full-text vector
+                                search with Typesense and Docker deployment.</p>
+                            <ul class="project-tech-list">
+                                <li>Python (FastAPI)</li>
+                                <li>Typesense</li>
+                                <li>Docker</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <p>I am currently looking for new opportunities, ideally in financial consulting or data
+                        engineering. Whether you have a question or just want to say hi, my inbox is always open.</p>
+                    <div class="contact-links"
+                        style="display: flex; gap: 20px; justify-content: center; margin-bottom: 20px;">
+                        <a href="mailto:lmendezayl@gmail.com" class="btn primary">Email Me</a>
+                        <a href="https://linkedin.com/in/lmendezayala" target="_blank"
+                            class="btn secondary">LinkedIn</a>
+                        <a href="https://github.com/lmendezayl" target="_blank" class="btn secondary">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Designed & Built by Lautaro Evaristo Mendez</p>
+            <!-- Easter Egg -->
+            <a href="https://op.gg/es/lol/summoners/las/roguesir-lmbda" target="_blank" class="secret-link"
+                title="?">?</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
