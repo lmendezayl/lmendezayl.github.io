@@ -329,19 +329,36 @@ section {
     color: var(--text-secondary);
 }
 
+
 /* Skills/Tech Stack */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
+    /* Force 4 columns on large screens to fit all horizontally if space permits, or auto-fit if too small */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .skill-card {
     background-color: var(--card-bg);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 4px;
     transition: var(--transition);
     border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .skill-card:hover {
@@ -350,19 +367,98 @@ section {
 }
 
 .skill-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
 }
 
 .skill-card h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
     color: var(--text-primary);
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
-.skill-card p {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
+/* Tech Icons */
+.tech-icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    align-items: center;
+    margin-top: 1rem;
+    /* Flow naturally from top */
+}
+
+.tech-icon {
+    font-size: 3rem;
+    /* color: var(--text-secondary);  Removed to allow original colors */
+    transition: var(--transition);
+    position: relative;
+    /* For tooltip */
+    cursor: help;
+}
+
+.tech-icon:hover {
+    /* Color handled by .colored class or hover filter */
+    transform: translateY(-3px);
+    filter: brightness(1.2);
+    z-index: 100;
+}
+
+/* Hover Tooltip - Fade Name Below */
+.tech-icon::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2px 6px;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.tech-icon:hover::after {
+    opacity: 1;
+    bottom: -2rem;
+    /* Slide down slightly */
+}
+
+/* Custom Tech Icons (SVGs) */
+.custom-tech-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+}
+
+.custom-tech-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    /* Or use specific file in SVG */
+}
+
+/* Ensure hover effect works on the wrapper */
+.custom-tech-icon:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+/* .tech-icon-small {
+    font-size: 2rem;
+    opacity: 0.8;
+} Removed per user request to have all same size */
+
+.tech-icon-small:hover {
+    opacity: 1;
 }
 
 /* Projects Section */
@@ -507,6 +603,11 @@ footer {
     /* Let clicks pass through */
     opacity: 0.6;
     /* Minimalist subtle look */
+}
+
+#lorentz-trigger:hover {
+    opacity: 1 !important;
+    transform: scale(1.2);
 }
 
 .tech-circle {

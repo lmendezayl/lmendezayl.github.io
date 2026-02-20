@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 
 <body>
@@ -54,6 +55,9 @@
             <canvas id="math-canvas"></canvas>
         </div>
         <div class="container">
+            <!-- Easter Egg Trigger (Visible & Clickable) -->
+            <div id="lorentz-trigger" style="position: absolute; top: 120px; left: 20px; width: 40px; height: 40px; z-index: 2000; cursor: pointer; color: var(--accent); font-size: 2rem; opacity: 0.3; transition: opacity 0.3s;" title="?">.</div>
+            
             <p class="overline">Hello, I'm <span class="highlight">Lautaro Mendez</span></p>
             <h1>Data
                 <span class="highlight">
@@ -107,27 +111,116 @@
                     <div class="skill-card">
                         <div class="skill-icon">💻</div>
                         <h3>Languages</h3>
-                        <p>Python (FastAPI, Pandas, Sklearn, PyTorch), SQL (SQLite, SQL Server), Java, Google Apps
-                            Script
-                        </p>
+                        <div class="tech-icons-container">
+                            <i class="devicon-python-plain colored tech-icon" data-name="Python"></i>
+                            <i class="devicon-fastapi-plain colored tech-icon" data-name="FastAPI"></i>
+                            <i class="devicon-pandas-plain colored tech-icon" data-name="Pandas"></i>
+                            <i class="devicon-scikitlearn-plain colored tech-icon" data-name="Scikit-Learn"></i>
+                            <i class="devicon-pytorch-original colored tech-icon" data-name="PyTorch"></i>
+                            <i class="devicon-azuresql-plain colored tech-icon" data-name="SQL"></i>
+                            <i class="devicon-sqlite-plain colored tech-icon" data-name="SQLite"></i>
+                            <i class="devicon-microsoftsqlserver-plain colored tech-icon" data-name="SQL Server"></i>
+                            <i class="devicon-java-plain colored tech-icon" data-name="Java"></i>
+                            
+                            <!-- Apps Script (Custom Fan SVG - Folded Triangle) -->
+                            <span class="tech-icon custom-tech-icon" data-name="Google Apps Script">
+                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Google Apps Script</title>
+                                    <!-- Blue section -->
+                                    <path fill="#4285F4" d="M12 2L2 19h10L12 2z"/> 
+                                    <!-- Green section -->
+                                    <path fill="#34A853" d="M12 2l10 17H12V2z"/>
+                                    <!-- Red Fold -->
+                                    <path fill="#EA4335" d="M12 19l10-17H2l10 17z" opacity="0.3"/> <!-- Shadow/Fold effect approximation -->
+                                    <!-- Better Folded Triangle: Simple 3-part -->
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path fill="#4285F4" d="M3.5 19L12 4l3.5 6L12 19H3.5z"/> <!-- Left Blue -->
+                                    <path fill="#34A853" d="M20.5 19L12 4l-3.5 6L12 19h8.5z"/> <!-- Right Green -->
+                                    <path fill="#EA4335" d="M12 4l-3.5 6h7L12 4z"/> <!-- Top Red (Fold) -->
+                                </svg>
+                            </span>
+                        </div>
                     </div>
                     <!-- Cloud -->
                     <div class="skill-card">
                         <div class="skill-icon">☁️</div>
                         <h3>Cloud & DevOps</h3>
-                        <p>AWS (EC2, Redshift), GCP (BigQuery, Cloud Run), Docker, Git</p>
+                        <div class="tech-icons-container">
+                            <i class="devicon-amazonwebservices-plain-wordmark colored tech-icon" data-name="AWS"></i>
+                            <i class="devicon-googlecloud-plain colored tech-icon" data-name="GCP"></i>
+                            <i class="devicon-docker-plain colored tech-icon" data-name="Docker"></i>
+                            <i class="devicon-git-plain colored tech-icon" data-name="Git"></i>
+                        </div>
                     </div>
                     <!-- Data Engineering -->
                     <div class="skill-card">
                         <div class="skill-icon">🔧</div>
                         <h3>Data Engineering</h3>
-                        <p>ETL Pipelines, APIs (REST/SOAP), Github Actions, Databricks</p>
+                        <div class="tech-icons-container">
+                            <i class="devicon-linux-plain colored tech-icon" data-name="Linux"></i>
+                            <i class="devicon-bash-plain colored tech-icon" data-name="Bash / Shell"></i>
+                            <i class="devicon-githubactions-plain colored tech-icon" data-name="Github Actions"></i>
+                            <i class="devicon-apachespark-plain colored tech-icon" data-name="Spark"></i>
+                            
+                            <!-- Databricks (Custom SVG - Red Bricks) -->
+                            <span class="tech-icon custom-tech-icon" data-name="Databricks">
+                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Databricks</title>
+                                    <path fill="#FF3621" d="M1.5 12l9.5-5.5v3.5l-6 3.5 6 3.5v-3.5l-9.5-5.5v4z"/> <!-- Left bracket (approx) -->
+                                    <path fill="#FF3621" d="M22.5 12l-9.5-5.5v3.5l6 3.5-6 3.5v-3.5l9.5-5.5v4z"/> <!-- Right bracket (approx) -->
+                                    <!-- A more accurate 'brick' shape -->
+                                    <path fill="#FF3621" d="M12 2.5L2 8v8l10 5.5L22 16V8L12 2.5z M12 5l7.5 4.5-7.5 4-7.5-4L12 5z M4.5 9.5l7.5 4v6l-7.5-4.5v-5.5z M13 14l7.5-4v5.5l-7.5 4.5V14z" opacity="0.0"/> <!-- Filled Hexagon -->
+                                    <!-- Simplified 'Brackets' Logo -->
+                                    <path fill="#FF3621" d="M2 7.5L12 2l10 5.5v9L12 22 2 16.5V7.5zm10-3.2L4.5 8.5 12 12.8l7.5-4.3L12 4.3zM4.5 10.8v4.5L12 19.6v-4.5L4.5 10.8zm9 4.3v4.5l7.5-4.3v-4.5L13.5 15.1z"/>
+                                </svg>
+                            </span>
+
+                            <!-- SQLAlchemy (Devicon) -->
+                            <i class="devicon-sqlalchemy-plain colored tech-icon" data-name="SQLAlchemy"></i>
+
+                            <!-- Pydantic (Custom SVG - Snakes) -->
+                            <span class="tech-icon custom-tech-icon" data-name="Pydantic">
+                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Pydantic</title>
+                                    <path fill="#E92063" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                                    <!-- Pydantic Logo: Snake curve -->
+                                    <path fill="#E92063" d="M15.5 5.5c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5h3v-9h-3z" opacity="0"/> 
+                                    <!-- Two intertwined curves (Abstract) -->
+                                    <path fill="#E92063" d="M7 8c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4H7V8z"/> <!-- Top link -->
+                                    <path fill="#E92063" d="M17 16c0 2.2-1.8 4-4 4s-4-1.8-4-4 1.8-4 4-4h4v4z"/> <!-- Bottom link -->
+                                </svg>
+                            </span>
+                        </div>
                     </div>
                     <!-- Analytics -->
                     <div class="skill-card">
                         <div class="skill-icon">📊</div>
                         <h3>Analytics & Tools</h3>
-                        <p>Power BI, Looker Studio, Excel, Google Analytics, Postman</p>
+                        <div class="tech-icons-container">
+                            <!-- Looker Studio (Custom SVG - Rings) -->
+                            <span class="tech-icon custom-tech-icon" data-name="Looker Studio">
+                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Looker Studio</title>
+                                    <!-- Rings (Annulus) -->
+                                    <circle cx="15" cy="14" r="7" fill="none" stroke="#4285F4" stroke-width="3" />
+                                    <!-- Small Ring at 11 o'clock -->
+                                    <circle cx="6" cy="5" r="3.5" fill="none" stroke="#4285F4" stroke-width="2.5" />
+                                </svg>
+                            </span>
+                            
+                            <!-- Power BI (Custom SVG) -->
+                            <span class="tech-icon custom-tech-icon" data-name="Power BI">
+                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Power BI</title>
+                                    <path fill="#F2C811" d="M6 12h4v8H6z"/>
+                                    <path fill="#F2C811" d="M12 8h4v12h-4z"/>
+                                    <path fill="#F2C811" d="M18 4h4v16h-4z"/>
+                                </svg>
+                            </span>
+                            
+                            <i class="devicon-google-plain colored tech-icon" data-name="Google Analytics"></i>
+                            <i class="devicon-postman-plain colored tech-icon" data-name="Postman"></i>
+                        </div>
                     </div>
                 </div>
             </div>

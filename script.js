@@ -68,6 +68,7 @@ if (themeSwitch) {
 const canvas = document.getElementById('math-canvas');
 if (canvas) {
     const ctx = canvas.getContext('2d');
+
     let width, height;
     let mouseX = 0, mouseY = 0;
     let time = 0;
@@ -91,7 +92,31 @@ if (canvas) {
         mouseY = e.clientY - rect.top;
     });
 
-    function draw() {
+    // State for visualization
+    let visualMode = 'quiver'; // 'quiver' or 'lorentz'
+
+    // Lorentz State
+    let l_x = 0.1, l_y = 0, l_z = 0;
+    const sigma = 10, rho = 28, beta = 8 / 3;
+    const l_dt = 0.0045;
+    let points = []; // Trail
+    const maxPoints = 3500;
+
+    // Trigger Easter Egg
+    const trigger = document.getElementById('lorentz-trigger');
+    if (trigger) {
+        trigger.addEventListener('click', () => {
+            visualMode = (visualMode === 'quiver') ? 'lorentz' : 'quiver';
+            // Reset Lorentz if enabled
+            if (visualMode === 'lorentz') {
+                ctx.clearRect(0, 0, width, height);
+                points = [];
+                l_x = 0.1; l_y = 0; l_z = 0;
+            }
+        });
+    }
+
+    function drawQuiver() {
         ctx.clearRect(0, 0, width, height);
 
         time += 0.005;
@@ -132,6 +157,72 @@ if (canvas) {
 
                 ctx.stroke();
             }
+        }
+    }
+
+    function drawLorentz() {
+        // Fade effect for trail
+        ctx.fillStyle = 'rgba(10, 25, 47, 0.05)'; // Fade out old points
+        // Check light mode for fade color
+        if (document.body.classList.contains('light-mode')) {
+            ctx.fillStyle = 'rgba(249, 248, 244, 0.05)';
+        }
+        ctx.fillRect(0, 0, width, height);
+
+        // Calculate Physics
+        const dx = (sigma * (l_y - l_x)) * l_dt;
+        const dy = (l_x * (rho - l_z) - l_y) * l_dt;
+        const dz = (l_x * l_y - beta * l_z) * l_dt;
+
+        l_x += dx;
+        l_y += dy;
+        l_z += dz;
+
+        points.push({ x: l_x, y: l_y, z: l_z });
+        if (points.length > maxPoints) points.shift();
+
+        // Draw
+        ctx.beginPath();
+        ctx.strokeStyle = '#64ffda'; // Accent
+        if (document.body.classList.contains('light-mode')) {
+            ctx.strokeStyle = '#0056b3'; // Accent Dark
+        }
+        ctx.lineWidth = 2;
+
+        // Scale and Center
+        const scale = 15;
+        const cx = width / 2;
+        const cy = height / 2;
+
+        points.forEach((p, i) => {
+            // Simple projection: just X and Z for butterfly shape usually, or X/Y
+            // Standard Front View: X vs Z
+            // Let's rotate it a bit or just plot X,Y
+            const px = cx + p.x * scale;
+            const py = cy + p.y * scale; // Invert Y? Canvas Y is down.
+
+            if (i === 0) ctx.moveTo(px, py);
+            else ctx.lineTo(px, py);
+        });
+
+        ctx.stroke();
+
+        // Speed up integration for visual effect?
+        for (let i = 0; i < 5; i++) {
+            const dx = (sigma * (l_y - l_x)) * l_dt;
+            const dy = (l_x * (rho - l_z) - l_y) * l_dt;
+            const dz = (l_x * l_y - beta * l_z) * l_dt;
+            l_x += dx; l_y += dy; l_z += dz;
+            points.push({ x: l_x, y: l_y, z: l_z });
+            if (points.length > maxPoints) points.shift();
+        }
+    }
+
+    function draw() {
+        if (visualMode === 'quiver') {
+            drawQuiver();
+        } else {
+            drawLorentz();
         }
         requestAnimationFrame(draw);
     }
