@@ -21,13 +21,16 @@
         <div class="container nav-container">
             <div class="logo">Lautaro <span class="middle-name">Evaristo</span> Mendez</div>
             <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Stack</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li>
+                <li><a href="#hero" data-i18n="nav-home">Home</a></li>
+                <li><a href="#about" data-i18n="nav-about">About</a></li>
+                <li><a href="#skills" data-i18n="nav-stack">Stack</a></li>
+                <li><a href="#experience" data-i18n="nav-experience">Experience</a></li>
+                <li><a href="#projects" data-i18n="nav-projects">Projects</a></li>
+                <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+                <li style="display: flex; align-items: center; gap: 1rem;">
+                    <button id="lang-switch" class="lang-switch" style="background: none; border: none; cursor: pointer; padding: 0; display: flex; align-items: center;" aria-label="Toggle Language">
+                        <img id="lang-flag" src="https://flagcdn.com/w40/us.png" alt="English" style="width: 24px; height: 24px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    </button>
                     <button class="theme-switch" aria-label="Toggle Dark/Light Mode">
                         <div class="switch-handle"></div>
                     </button>
@@ -58,21 +61,20 @@
             <!-- Easter Egg Trigger (Visible & Clickable) -->
             <div id="lorentz-trigger" style="position: absolute; top: 120px; left: 20px; width: 40px; height: 40px; z-index: 2000; cursor: pointer; color: var(--accent); font-size: 2rem; opacity: 0.3; transition: opacity 0.3s;" title="?">.</div>
             
-            <p class="overline">Hello, I'm <span class="highlight">Lautaro Mendez</span></p>
-            <h1>Data
-                <span class="highlight">
+            <p class="overline" data-i18n="hero-overline">Hello, I'm <span class="highlight">Lautaro Mendez</span></p>
+            <h1><span data-i18n="hero-title">Data </span><span class="highlight">
                     <span class="rotating-text">
-                        <span>Engineer</span>
-                        <span>Scientist</span>
-                        <span>Engineer</span>
+                        <span data-i18n="hero-rot-1">Engineer</span>
+                        <span data-i18n="hero-rot-2">Scientist</span>
+                        <span data-i18n="hero-rot-3">Engineer</span>
                     </span>
-                </span>
+                </span><span data-i18n="hero-suffix"></span>
             </h1>
-            <p class="subtitle">Building scalable pipelines, transforming raw data into insights, and deploying ML
+            <p class="subtitle" data-i18n="hero-subtitle">Building scalable pipelines, transforming raw data into insights, and deploying ML
                 models.</p>
             <div class="cta-buttons">
-                <a href="#projects" class="btn primary">View Work</a>
-                <a href="cv.pdf" class="btn secondary" target="_blank">View CV</a>
+                <a href="#projects" class="btn primary" data-i18n="hero-btn-work">View Work</a>
+                <a href="CV_Lautaro_Mendez_2026_en.pdf" class="btn secondary" target="_blank" id="cv-link" data-i18n="hero-btn-cv">View CV</a>
             </div>
         </div>
         <a href="#about" class="scroll-down">
@@ -87,16 +89,16 @@
     <main>
         <section id="about">
             <div class="container">
-                <h2 class="section-title">About Me</h2>
+                <h2 class="section-title" data-i18n="about-title">About Me</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>I am a Data Engineer and Scientist with experience in building robust data pipelines, process
+                        <p data-i18n="about-p1">I am a Data Engineer and Scientist with experience in building robust data pipelines, process
                             automation, and applied statistical analysis. </p>
-                        <p>Currently in my 5th year of a Data Science degree at the University of Buenos Aires. I have
+                        <p data-i18n="about-p2">Currently in my 5th year of a Data Science degree at the University of Buenos Aires. I have
                             hands-on experience with <b>Python</b>, <b>SQL</b>, and <b>Cloud platforms (AWS, GCP)</b>,
                             working on projects
                             ranging from ETL automation to ML model deployment.</p>
-                        <p>My goal is to continue growing in projects that integrate Data Engineering with operational
+                        <p data-i18n="about-p3">My goal is to continue growing in projects that integrate Data Engineering with operational
                             analysis.</p>
                     </div>
                 </div>
@@ -105,12 +107,12 @@
 
         <section id="skills">
             <div class="container">
-                <h2 class="section-title">Tech Stack</h2>
+                <h2 class="section-title" data-i18n="skills-title">Tech Stack</h2>
                 <div class="skills-grid">
                     <!-- Languages -->
                     <div class="skill-card">
                         <div class="skill-icon">💻</div>
-                        <h3>Languages</h3>
+                        <h3 data-i18n="skills-languages">Languages</h3>
                         <div class="tech-icons-container">
                             <i class="devicon-python-plain colored tech-icon" data-name="Python"></i>
                             <i class="devicon-fastapi-plain colored tech-icon" data-name="FastAPI"></i>
@@ -144,7 +146,7 @@
                     <!-- Cloud -->
                     <div class="skill-card">
                         <div class="skill-icon">☁️</div>
-                        <h3>Cloud & DevOps</h3>
+                        <h3 data-i18n="skills-cloud">Cloud & DevOps</h3>
                         <div class="tech-icons-container">
                             <i class="devicon-amazonwebservices-plain-wordmark colored tech-icon" data-name="AWS"></i>
                             <i class="devicon-googlecloud-plain colored tech-icon" data-name="GCP"></i>
@@ -155,7 +157,7 @@
                     <!-- Data Engineering -->
                     <div class="skill-card">
                         <div class="skill-icon">🔧</div>
-                        <h3>Data Engineering</h3>
+                        <h3 data-i18n="skills-dataeng">Data Engineering</h3>
                         <div class="tech-icons-container">
                             <i class="devicon-linux-plain colored tech-icon" data-name="Linux"></i>
                             <i class="devicon-bash-plain colored tech-icon" data-name="Bash / Shell"></i>
@@ -195,7 +197,7 @@
                     <!-- Analytics -->
                     <div class="skill-card">
                         <div class="skill-icon">📊</div>
-                        <h3>Analytics & Tools</h3>
+                        <h3 data-i18n="skills-analytics">Analytics & Tools</h3>
                         <div class="tech-icons-container">
                             <!-- Looker Studio (Custom SVG - Rings) -->
                             <span class="tech-icon custom-tech-icon" data-name="Looker Studio">
@@ -235,34 +237,8 @@
                 <div class="tech-circle circle-2" style="right: -5vw; top: 50%;"></div>
             </div>
             <div class="container">
-                <h2 class="section-title">Professional Experience</h2>
+                <h2 class="section-title" data-i18n="exp-title">Professional Experience</h2>
                 <div class="projects-grid">
-                    <!-- Project 4: Iceferas SRL -->
-                    <article class="project-card">
-                        <div class="project-content">
-                            <div class="project-top">
-                                <div class="folder-icon">
-                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                        <line x1="18" y1="20" x2="18" y2="10" />
-                                        <line x1="12" y1="20" x2="12" y2="4" />
-                                        <line x1="6" y1="20" x2="6" y2="14" />
-                                    </svg>
-                                </div>
-                                <div class="project-links">
-                                    <!-- No link provided -->
-                                </div>
-                            </div>
-                            <h3>Purchases App Module</h3>
-                            <p><strong>Iceferas SRL</strong>: Developing and implementing a custom data visualization module using Flet (Python) to streamline operational reporting.</p>
-                            <ul class="project-tech-list">
-                                <li>Python</li>
-                                <li>Flet</li>
-                                <li>SQL</li>
-                            </ul>
-                        </div>
-                    </article>
-
                     <!-- Project 1: Grupo Penna -->
                     <article class="project-card">
                         <div class="project-content">
@@ -286,8 +262,8 @@
                                         </svg></a>
                                 </div>
                             </div>
-                            <h3>ETL Pipelines & Dockerization</h3>
-                            <p><strong>Grupo Penna</strong>: Developed and deployed ETL pipelines between external APIs
+                            <h3 data-i18n="exp-2-title">ETL Pipelines & Dockerization</h3>
+                            <p data-i18n="exp-2-desc"><strong>Grupo Penna</strong>: Developed and deployed ETL pipelines between external APIs
                                 and SQL Server using Python (FastAPI). Implemented and dockerized projects on AWS EC2,
                                 automating daily ETL processes.</p>
                             <ul class="project-tech-list">
@@ -317,8 +293,8 @@
                                     <!-- No link provided -->
                                 </div>
                             </div>
-                            <h3>LLM Prompt Engineering</h3>
-                            <p><strong>Scale AI</strong>: Developed prompts for LLaMA 3 based LLMs, systematically
+                            <h3 data-i18n="exp-3-title">LLM Prompt Engineering</h3>
+                            <p data-i18n="exp-3-desc"><strong>Scale AI</strong>: Developed prompts for LLaMA 3 based LLMs, systematically
                                 evaluating response quality using Python and data analysis techniques to improve model
                                 performance.</p>
                             <ul class="project-tech-list">
@@ -355,8 +331,8 @@
                                         </svg></a>
                                 </div>
                             </div>
-                            <h3>Billing Process Automation</h3>
-                            <p><strong>GFPrint</strong>: Automated billing and order management processes in Google
+                            <h3 data-i18n="exp-4-title">Billing Process Automation</h3>
+                            <p data-i18n="exp-4-desc"><strong>GFPrint</strong>: Automated billing and order management processes in Google
                                 Sheets using Apps Script, reducing execution time from minutes to seconds and
                                 eliminating manual errors.</p>
                             <ul class="project-tech-list">
@@ -376,7 +352,7 @@
                 <div class="tech-circle circle-1" style="width: 20vw; height: 20vw; left: 5%; top: 60%"></div>
             </div>
             <div class="container">
-                <h2 class="section-title">Personal Projects</h2>
+                <h2 class="section-title" data-i18n="proj-title">Personal Projects</h2>
                 <div class="projects-grid">
                     <!-- Project New: TMDB API -->
                     <article class="project-card">
@@ -403,8 +379,8 @@
                                         </svg></a>
                                 </div>
                             </div>
-                            <h3>TMDB Top 5000 Movies API</h3>
-                            <p>End-to-End data engineering solution featuring a Medallion Architecture, automated ETL
+                            <h3 data-i18n="proj-1-title">TMDB Top 5000 Movies API</h3>
+                            <p data-i18n="proj-1-desc">End-to-End data engineering solution featuring a Medallion Architecture, automated ETL
                                 pipeline, and REST API. Includes full-text vector search with Typesense and Docker
                                 deployment.</p>
                             <ul class="project-tech-list">
@@ -437,8 +413,8 @@
                                         </svg></a>
                                 </div>
                             </div>
-                            <h3>2022 Argentina Census Data Analysis</h3>
-                            <p>Exploratory Data Analysis of the 2022 Census using Pandas and GeoJSON mapping. Applied
+                            <h3 data-i18n="proj-2-title">2022 Argentina Census Data Analysis</h3>
+                            <p data-i18n="proj-2-desc">Exploratory Data Analysis of the 2022 Census using Pandas and GeoJSON mapping. Applied
                                 linear models to uncover demographic trends.</p>
                             <ul class="project-tech-list">
                                 <li>Pandas</li>
@@ -453,13 +429,32 @@
 
         <section id="contact">
             <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
+                <h2 class="section-title" data-i18n="contact-title">Get In Touch</h2>
                 <div class="contact-content">
-                    <p>I am currently looking for new opportunities, ideally in financial consulting or data
+                    <p data-i18n="contact-desc">I am currently looking for new opportunities, ideally in financial consulting or data
                         engineering. Whether you have a question or just want to say hi, my inbox is always open.</p>
+                    
+                    <form class="contact-form" action="https://formspree.io/f/xaqpykbp" method="POST">
+                        <div class="form-group">
+                            <label for="name" data-i18n="contact-name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact-email-label">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact-message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary submit-btn" data-i18n="contact-submit">Send Message</button>
+                        <p id="form-success-msg" style="display: none; color: var(--accent); margin-top: 1rem; font-family: var(--font-mono); font-size: 0.9rem;" data-i18n="contact-success">Message sent successfully!</p>
+                        <p id="form-error-msg" style="display: none; color: #ff6b6b; margin-top: 1rem; font-family: var(--font-mono); font-size: 0.9rem;" data-i18n="contact-error">Oops! There was a problem submitting your form.</p>
+                    </form>
+
                     <div class="contact-links"
                         style="display: flex; gap: 20px; justify-content: center; margin-bottom: 20px;">
-                        <a href="mailto:lmendezayl@gmail.com" class="btn primary">Email Me</a>
+                        <a href="mailto:lmendezayl@gmail.com" class="btn primary" data-i18n="contact-email">Email Me</a>
                         <a href="https://linkedin.com/in/lmendezayala" target="_blank"
                             class="btn secondary">LinkedIn</a>
                         <a href="https://github.com/lmendezayl" target="_blank" class="btn secondary">GitHub</a>
@@ -471,7 +466,7 @@
 
     <footer>
         <div class="container">
-            <p>Designed & Built by Lautaro Evaristo Mendez</p>
+            <p data-i18n="footer-text">Designed & Built by Lautaro Evaristo Mendez</p>
             <!-- Easter Egg -->
             <a href="https://op.gg/es/lol/summoners/las/roguesir-lmbda" target="_blank" class="secret-link"
                 title="?">?</a>
