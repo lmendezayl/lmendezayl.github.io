@@ -83,6 +83,30 @@ body.light-mode .orbit-dot {
     top: 3px;
     left: 4px;
     transition: var(--transition);
+    z-index: 2;
+}
+
+.theme-switch .icon-sun,
+.theme-switch .icon-moon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    z-index: 1;
+    color: var(--text-secondary);
+    pointer-events: none;
+}
+
+.theme-switch .icon-sun {
+    left: 6px;
+    color: #f39c12; /* Sun color */
+}
+
+.theme-switch .icon-moon {
+    right: 6px;
+    color: #f1c40f; /* Moon color */
+    fill: currentColor;
 }
 
 /* Light Mode Switch State */
@@ -93,7 +117,7 @@ body.light-mode .theme-switch {
 
 body.light-mode .switch-handle {
     background-color: var(--accent);
-    transform: translateX(22px);
+    transform: translateX(24px);
 }
 
 
