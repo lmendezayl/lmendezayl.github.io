@@ -353,7 +353,6 @@ const translations = {
 
         'contact-title': 'Get In Touch',
         'contact-desc': 'I am currently looking for new opportunities, ideally in financial consulting or data\n                        engineering. Whether you have a question or just want to say hi, my inbox is always open.',
-        'contact-email': 'Email Me',
         'contact-name': 'Name',
         'contact-email-label': 'Email',
         'contact-message': 'Message',
@@ -408,7 +407,6 @@ const translations = {
 
         'contact-title': 'Contacto',
         'contact-desc': 'Actualmente busco nuevas oportunidades, idealmente en finanzas, ciencia o ingeniería de datos. Ya sea que tengas una pregunta o solo quieras saludar, mi email siempre está disponible.',
-        'contact-email': 'Email',
         'contact-name': 'Nombre',
         'contact-email-label': 'Correo electrónico',
         'contact-message': 'Mensaje',
