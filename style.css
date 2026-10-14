@@ -258,6 +258,13 @@ h3 {
     margin-bottom: 1.2rem;
 }
 
+/* The Spanish job title is a longer, unbreakable line - let it shrink on phones */
+@media (max-width: 600px) {
+    html[lang="es"] #hero h1 {
+        font-size: clamp(24px, 6.8vw, 40px);
+    }
+}
+
 #hero h1 {
     font-size: clamp(40px, 8vw, 80px);
     line-height: 1.1;
@@ -344,8 +351,19 @@ section {
 }
 
 /* About Section */
+/* The section is a flex column and .container uses `margin: 0 auto`, which makes it
+   shrink-to-fit around its content. Without this the About block ends up narrower than
+   (and misaligned with) the other sections once the photo column is added. */
+#about .container {
+    width: 100%;
+}
+
 .about-content {
-    max-width: 800px;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+    gap: 3rem;
+    align-items: start;
 }
 
 .about-text p {
@@ -353,12 +371,79 @@ section {
     color: var(--text-secondary);
 }
 
+/* About photo (drop the image at assets/profile.jpg) */
+.about-photo {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 0.4rem;
+}
+
+.about-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Static accent frame - deliberately no hover shift, the photo stays put */
+.about-photo::after {
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: -16px;
+    bottom: -16px;
+    border: 2px solid var(--accent);
+    border-radius: 4px;
+    z-index: 0;
+}
+
+/* Fallback shown while assets/profile.jpg does not exist yet */
+.photo-placeholder {
+    display: none;
+}
+
+.about-photo.no-photo img,
+.about-photo.no-photo::after {
+    display: none;
+}
+
+.about-photo.no-photo .photo-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    padding: 1rem;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    background-color: var(--card-bg);
+    border: 1px dashed var(--accent);
+    border-radius: 4px;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+.about-photo.no-photo .photo-placeholder svg {
+    color: var(--accent);
+    opacity: 0.7;
+}
+
 
 /* Skills/Tech Stack */
 .skills-grid {
     display: grid;
-    /* Force 4 columns on large screens to fit all horizontally if space permits, or auto-fit if too small */
-    grid-template-columns: repeat(4, 1fr);
+    /* 6 cards: 3 per row on large screens, 2 on tablet, 1 on phones */
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 
@@ -520,6 +605,17 @@ section {
 
 .project-links svg {
     color: var(--text-secondary);
+}
+
+.project-badge {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    background-color: var(--accent-tint);
+    border-radius: 15px;
+    padding: 3px 10px;
+    white-space: nowrap;
 }
 
 .project-links svg:hover {
@@ -850,6 +946,16 @@ footer {
         font-size: 0.9rem;
     }
 
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+    }
+
+    .about-photo {
+        margin: 0 auto;
+        max-width: 260px;
+    }
+
     /* Constrain background shapes to prevent overflow */
     .hero-bg,
     .tech-circle,
@@ -926,8 +1032,9 @@ footer {
     text-align: left;
 }
 
-.rotating-text span {
+.rotating-text > span {
     display: block;
+    white-space: nowrap;
     height: 100%;
     padding-bottom: 0.1em;
     animation: rotate-words 6s infinite ease-in-out;

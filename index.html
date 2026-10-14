@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Portfolio</title>
     <meta name="description"
-        content="Portfolio of a Data Engineer & Scientist specializing in big data, pipelines, and analytics.">
+        content="Portfolio of a Data Scientist & ML Engineer specializing in machine learning, statistical analysis, and data pipelines.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -64,12 +64,10 @@
             <div id="lorentz-trigger" style="position: absolute; top: 120px; left: 20px; width: 40px; height: 40px; z-index: 2000; cursor: pointer; color: var(--accent); font-size: 2rem; opacity: 0.3; transition: opacity 0.3s;" title="?">.</div>
             
             <p class="overline" data-i18n="hero-overline">Hello, I'm <span class="highlight">Lautaro Mendez</span></p>
-            <h1><span data-i18n="hero-title">Data </span><span class="highlight">
-                    <span class="rotating-text">
-                        <span data-i18n="hero-rot-1">Engineer</span>
-                        <span data-i18n="hero-rot-2">Scientist</span>
-                        <span data-i18n="hero-rot-3">Engineer</span>
-                    </span>
+            <h1><span data-i18n="hero-title"></span><span class="rotating-text">
+                    <span data-i18n="hero-rot-1">Data <span class="highlight">Scientist</span></span>
+                    <span data-i18n="hero-rot-2">ML <span class="highlight">Engineer</span></span>
+                    <span data-i18n="hero-rot-3">Data <span class="highlight">Scientist</span></span>
                 </span><span data-i18n="hero-suffix"></span>
             </h1>
             <p class="subtitle" data-i18n="hero-subtitle">Building scalable pipelines, transforming raw data into insights, and deploying ML
@@ -96,14 +94,26 @@
                 <h2 class="section-title" data-i18n="about-title">About Me</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p data-i18n="about-p1">I am a Data Engineer and Scientist with experience in building robust data pipelines, process
-                            automation, and applied statistical analysis. </p>
-                        <p data-i18n="about-p2">Currently in my 5th year of a Data Science degree at the University of Buenos Aires. I have
-                            hands-on experience with <b>Python</b>, <b>SQL</b>, and <b>Cloud platforms (AWS, GCP)</b>,
-                            working on projects
-                            ranging from ETL automation to ML model deployment.</p>
-                        <p data-i18n="about-p3">My goal is to continue growing in projects that integrate Data Engineering with operational
-                            analysis.</p>
+                        <p data-i18n="about-p1">I am a <b>Data Scientist</b> and <b>ML Engineer</b> with experience building, evaluating and
+                            deploying machine learning models, and turning large volumes of raw data into decisions.</p>
+                        <p data-i18n="about-p2">Currently in my 5th year of a Data Science degree at the University of Buenos Aires. I work
+                            daily with <b>Python</b>, <b>SQL</b> and <b>R</b>, alongside <b>Databricks</b>, <b>Airflow</b>
+                            and <b>Cloud platforms (AWS, GCP)</b>, on projects ranging from statistical modeling and
+                            experimentation to putting models into production.</p>
+                        <p data-i18n="about-p3">My goal is to keep growing in projects where Machine Learning has a direct impact on business
+                            decisions.</p>
+                    </div>
+                    <div class="about-photo">
+                        <img src="assets/profile.jpg" alt="Lautaro Mendez"
+                            onerror="this.closest('.about-photo').classList.add('no-photo')">
+                        <div class="photo-placeholder">
+                            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+                                <circle cx="12" cy="13" r="3.5" />
+                            </svg>
+                            <span data-i18n="about-photo-hint">Add your photo at <b>assets/profile.jpg</b></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -124,32 +134,76 @@
                         <h3 data-i18n="skills-languages">Languages</h3>
                         <div class="tech-icons-container">
                             <i class="devicon-python-plain colored tech-icon" data-name="Python"></i>
-                            <i class="devicon-fastapi-plain colored tech-icon" data-name="FastAPI"></i>
+                            <i class="devicon-azuresqldatabase-plain colored tech-icon" data-name="SQL"></i>
+                            <i class="devicon-r-plain colored tech-icon" data-name="R"></i>
+                        </div>
+                    </div>
+                    <!-- Python Libraries -->
+                    <div class="skill-card">
+                        <div class="skill-icon" style="color: var(--accent);">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="skills-libraries">Python Libraries</h3>
+                        <div class="tech-icons-container">
                             <i class="devicon-pandas-plain tech-icon" data-name="Pandas"></i>
                             <i class="devicon-scikitlearn-plain colored tech-icon" data-name="Scikit-Learn"></i>
                             <i class="devicon-pytorch-original colored tech-icon" data-name="PyTorch"></i>
-                            <i class="devicon-azuresql-plain colored tech-icon" data-name="SQL"></i>
-                            <i class="devicon-sqlite-plain colored tech-icon" data-name="SQLite"></i>
-                            <i class="devicon-microsoftsqlserver-plain colored tech-icon" data-name="SQL Server"></i>
-                            <i class="devicon-java-plain colored tech-icon" data-name="Java"></i>
-                            
-                            <!-- Apps Script (Custom Fan SVG - Folded Triangle) -->
-                            <span class="tech-icon custom-tech-icon" data-name="Google Apps Script">
+                            <i class="devicon-fastapi-plain colored tech-icon" data-name="FastAPI"></i>
+                            <i class="devicon-sqlalchemy-plain tech-icon" data-name="SQLAlchemy"></i>
+
+                            <!-- Pydantic (Custom SVG - Snakes) -->
+                            <span class="tech-icon custom-tech-icon" data-name="Pydantic">
                                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <title>Google Apps Script</title>
-                                    <!-- Blue section -->
-                                    <path fill="#4285F4" d="M12 2L2 19h10L12 2z"/> 
-                                    <!-- Green section -->
-                                    <path fill="#34A853" d="M12 2l10 17H12V2z"/>
-                                    <!-- Red Fold -->
-                                    <path fill="#EA4335" d="M12 19l10-17H2l10 17z" opacity="0.3"/> <!-- Shadow/Fold effect approximation -->
-                                    <!-- Better Folded Triangle: Simple 3-part -->
-                                    <path d="M0 0h24v24H0z" fill="none"/>
-                                    <path fill="#4285F4" d="M3.5 19L12 4l3.5 6L12 19H3.5z"/> <!-- Left Blue -->
-                                    <path fill="#34A853" d="M20.5 19L12 4l-3.5 6L12 19h8.5z"/> <!-- Right Green -->
-                                    <path fill="#EA4335" d="M12 4l-3.5 6h7L12 4z"/> <!-- Top Red (Fold) -->
+                                    <title>Pydantic</title>
+                                    <path fill="#E92063" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                                    <!-- Two intertwined curves (Abstract) -->
+                                    <path fill="#E92063" d="M7 8c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4H7V8z"/> <!-- Top link -->
+                                    <path fill="#E92063" d="M17 16c0 2.2-1.8 4-4 4s-4-1.8-4-4 1.8-4 4-4h4v4z"/> <!-- Bottom link -->
                                 </svg>
                             </span>
+                        </div>
+                    </div>
+                    <!-- Data Engineering -->
+                    <div class="skill-card">
+                        <div class="skill-icon" style="color: var(--accent);">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="8" height="8" x="3" y="3" rx="2" />
+                                <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+                                <rect width="8" height="8" x="13" y="13" rx="2" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="skills-dataeng">Data Engineering</h3>
+                        <div class="tech-icons-container">
+                            <i class="devicon-apachespark-plain colored tech-icon" data-name="Spark"></i>
+                            <i class="devicon-apacheairflow-plain colored tech-icon" data-name="Airflow"></i>
+
+                            <!-- Databricks (Custom SVG - Red Bricks) -->
+                            <span class="tech-icon custom-tech-icon" data-name="Databricks">
+                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Databricks</title>
+                                    <!-- Simplified Brackets Logo -->
+                                    <path fill="#FF3621" d="M2 7.5L12 2l10 5.5v9L12 22 2 16.5V7.5zm10-3.2L4.5 8.5 12 12.8l7.5-4.3L12 4.3zM4.5 10.8v4.5L12 19.6v-4.5L4.5 10.8zm9 4.3v4.5l7.5-4.3v-4.5L13.5 15.1z"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Databases -->
+                    <div class="skill-card">
+                        <div class="skill-icon" style="color: var(--accent);">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="skills-databases">Databases</h3>
+                        <div class="tech-icons-container">
+                            <i class="devicon-microsoftsqlserver-plain colored tech-icon" data-name="SQL Server"></i>
+                            <i class="devicon-mongodb-plain colored tech-icon" data-name="MongoDB"></i>
+                            <i class="devicon-sqlite-plain colored tech-icon" data-name="SQLite"></i>
                         </div>
                     </div>
                     <!-- Cloud -->
@@ -159,58 +213,15 @@
                                 <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
                             </svg>
                         </div>
-                        <h3 data-i18n="skills-cloud">Cloud & DevOps</h3>
+                        <h3 data-i18n="skills-cloud">Cloud &amp; DevOps</h3>
                         <div class="tech-icons-container">
                             <i class="devicon-amazonwebservices-plain-wordmark colored tech-icon" data-name="AWS"></i>
                             <i class="devicon-googlecloud-plain colored tech-icon" data-name="GCP"></i>
                             <i class="devicon-docker-plain colored tech-icon" data-name="Docker"></i>
                             <i class="devicon-git-plain colored tech-icon" data-name="Git"></i>
-                        </div>
-                    </div>
-                    <!-- Data Engineering -->
-                    <div class="skill-card">
-                        <div class="skill-icon" style="color: var(--accent);">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                            </svg>
-                        </div>
-                        <h3 data-i18n="skills-dataeng">Data Engineering</h3>
-                        <div class="tech-icons-container">
                             <i class="devicon-linux-plain tech-icon" data-name="Linux"></i>
                             <i class="devicon-bash-plain tech-icon" data-name="Bash / Shell"></i>
                             <i class="devicon-githubactions-plain colored tech-icon" data-name="Github Actions"></i>
-                            <i class="devicon-apachespark-plain colored tech-icon" data-name="Spark"></i>
-                            
-                            <!-- Databricks (Custom SVG - Red Bricks) -->
-                            <span class="tech-icon custom-tech-icon" data-name="Databricks">
-                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <title>Databricks</title>
-                                    <path fill="#FF3621" d="M1.5 12l9.5-5.5v3.5l-6 3.5 6 3.5v-3.5l-9.5-5.5v4z"/> <!-- Left bracket (approx) -->
-                                    <path fill="#FF3621" d="M22.5 12l-9.5-5.5v3.5l6 3.5-6 3.5v-3.5l9.5-5.5v4z"/> <!-- Right bracket (approx) -->
-                                    <!-- A more accurate 'brick' shape -->
-                                    <path fill="#FF3621" d="M12 2.5L2 8v8l10 5.5L22 16V8L12 2.5z M12 5l7.5 4.5-7.5 4-7.5-4L12 5z M4.5 9.5l7.5 4v6l-7.5-4.5v-5.5z M13 14l7.5-4v5.5l-7.5 4.5V14z" opacity="0.0"/> <!-- Filled Hexagon -->
-                                    <!-- Simplified 'Brackets' Logo -->
-                                    <path fill="#FF3621" d="M2 7.5L12 2l10 5.5v9L12 22 2 16.5V7.5zm10-3.2L4.5 8.5 12 12.8l7.5-4.3L12 4.3zM4.5 10.8v4.5L12 19.6v-4.5L4.5 10.8zm9 4.3v4.5l7.5-4.3v-4.5L13.5 15.1z"/>
-                                </svg>
-                            </span>
-
-                            <!-- SQLAlchemy (Devicon) -->
-                            <i class="devicon-sqlalchemy-plain tech-icon" data-name="SQLAlchemy"></i>
-
-                            <!-- Pydantic (Custom SVG - Snakes) -->
-                            <span class="tech-icon custom-tech-icon" data-name="Pydantic">
-                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <title>Pydantic</title>
-                                    <path fill="#E92063" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
-                                    <!-- Pydantic Logo: Snake curve -->
-                                    <path fill="#E92063" d="M15.5 5.5c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5h3v-9h-3z" opacity="0"/> 
-                                    <!-- Two intertwined curves (Abstract) -->
-                                    <path fill="#E92063" d="M7 8c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4H7V8z"/> <!-- Top link -->
-                                    <path fill="#E92063" d="M17 16c0 2.2-1.8 4-4 4s-4-1.8-4-4 1.8-4 4-4h4v4z"/> <!-- Bottom link -->
-                                </svg>
-                            </span>
                         </div>
                     </div>
                     <!-- Analytics -->
@@ -222,19 +233,8 @@
                                 <line x1="6" y1="20" x2="6" y2="14"></line>
                             </svg>
                         </div>
-                        <h3 data-i18n="skills-analytics">Analytics & Tools</h3>
+                        <h3 data-i18n="skills-analytics">Analytics &amp; Tools</h3>
                         <div class="tech-icons-container">
-                            <!-- Looker Studio (Custom SVG - Rings) -->
-                            <span class="tech-icon custom-tech-icon" data-name="Looker Studio">
-                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <title>Looker Studio</title>
-                                    <!-- Rings (Annulus) -->
-                                    <circle cx="15" cy="14" r="7" fill="none" stroke="#4285F4" stroke-width="3" />
-                                    <!-- Small Ring at 11 o'clock -->
-                                    <circle cx="6" cy="5" r="3.5" fill="none" stroke="#4285F4" stroke-width="2.5" />
-                                </svg>
-                            </span>
-                            
                             <!-- Power BI (Custom SVG) -->
                             <span class="tech-icon custom-tech-icon" data-name="Power BI">
                                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -244,9 +244,31 @@
                                     <path fill="#F2C811" d="M18 4h4v16h-4z"/>
                                 </svg>
                             </span>
-                            
+
+                            <!-- Looker Studio (Custom SVG - Rings) -->
+                            <span class="tech-icon custom-tech-icon" data-name="Looker Studio">
+                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Looker Studio</title>
+                                    <!-- Rings (Annulus) -->
+                                    <circle cx="15" cy="14" r="7" fill="none" stroke="#4285F4" stroke-width="3" />
+                                    <!-- Small Ring at 11 o clock -->
+                                    <circle cx="6" cy="5" r="3.5" fill="none" stroke="#4285F4" stroke-width="2.5" />
+                                </svg>
+                            </span>
+
                             <i class="devicon-google-plain colored tech-icon" data-name="Google Analytics"></i>
                             <i class="devicon-postman-plain colored tech-icon" data-name="Postman"></i>
+
+                            <!-- Apps Script (Custom Fan SVG - Folded Triangle) -->
+                            <span class="tech-icon custom-tech-icon" data-name="Google Apps Script">
+                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Google Apps Script</title>
+                                    <path d="M0 0h24v24H0z" fill="none"/>
+                                    <path fill="#4285F4" d="M3.5 19L12 4l3.5 6L12 19H3.5z"/> <!-- Left Blue -->
+                                    <path fill="#34A853" d="M20.5 19L12 4l-3.5 6L12 19h8.5z"/> <!-- Right Green -->
+                                    <path fill="#EA4335" d="M12 4l-3.5 6h7L12 4z"/> <!-- Top Red (Fold) -->
+                                </svg>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -264,6 +286,67 @@
             <div class="container">
                 <h2 class="section-title" data-i18n="exp-title">Professional Experience</h2>
                 <div class="projects-grid">
+                    <!-- Experience 1: Credicuotas (current) -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <div class="project-top">
+                                <div class="folder-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 3v18h18" />
+                                        <path d="m19 9-5 5-4-4-3 3" />
+                                        <circle cx="19" cy="9" r="1.5" />
+                                    </svg>
+                                </div>
+                                <div class="project-links">
+                                    <span class="project-badge" data-i18n="exp-1-badge">Current</span>
+                                </div>
+                            </div>
+                            <h3 data-i18n="exp-1-title">Data Science for CRM &amp; CX</h3>
+                            <p data-i18n="exp-1-desc"><strong>Credicuotas</strong>: Data Analyst and Data Scientist for CRM and CX data at a
+                                consumer finance company. Analysis and modeling over the customer journey using Python, R
+                                and SQL on Databricks, pipeline orchestration with Airflow, and reporting through Power BI
+                                dashboards. Also worked on data migrations between SQL and MongoDB.</p>
+                            <ul class="project-tech-list">
+                                <li>Python</li>
+                                <li>R</li>
+                                <li>SQL</li>
+                                <li>Databricks</li>
+                                <li>Airflow</li>
+                                <li>Power BI</li>
+                                <li>MongoDB</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Experience 2: Puriteina (VII Industrial Mathematics Workshop) -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <div class="project-top">
+                                <div class="folder-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z" />
+                                    </svg>
+                                </div>
+                                <div class="project-links">
+                                    <!-- No link provided -->
+                                </div>
+                            </div>
+                            <h3 data-i18n="exp-5-title">Tangential Flow Filtration Modeling</h3>
+                            <p data-i18n="exp-5-desc"><strong>Puriteina (VII Industrial Mathematics Workshop)</strong>: Modeled an industrial
+                                client's tangential flow filtration to estimate wall concentration, the driver of
+                                membrane fouling, and derived a closed-form flux-pressure model from plant data.
+                                Delivered as a Streamlit tool to set the working concentration before scaling to
+                                production.</p>
+                            <ul class="project-tech-list">
+                                <li>Python</li>
+                                <li>Streamlit</li>
+                                <li>Mathematical Modeling</li>
+                            </ul>
+                        </div>
+                    </article>
+
                     <!-- Project 1: Grupo Penna -->
                     <article class="project-card">
                         <div class="project-content">
@@ -379,6 +462,39 @@
             <div class="container">
                 <h2 class="section-title" data-i18n="proj-title">Personal Projects</h2>
                 <div class="projects-grid">
+                    <!-- Project: Deep Reinforcement Learning agents (DQN) -->
+                    <article class="project-card">
+                        <div class="project-content">
+                            <div class="project-top">
+                                <div class="folder-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="5" cy="6" r="2" />
+                                        <circle cx="5" cy="18" r="2" />
+                                        <circle cx="12" cy="12" r="2" />
+                                        <circle cx="19" cy="6" r="2" />
+                                        <circle cx="19" cy="18" r="2" />
+                                        <path d="M6.7 7.2 10.3 10.8M6.7 16.8 10.3 13.2M13.7 10.8 17.3 7.2M13.7 13.2 17.3 16.8" />
+                                    </svg>
+                                </div>
+                                <div class="project-links">
+                                    <!-- No link provided -->
+                                </div>
+                            </div>
+                            <h3 data-i18n="proj-3-title">Deep Reinforcement Learning Agents (DQN)</h3>
+                            <p data-i18n="proj-3-desc"><strong>Academic project</strong>: DQN agents trained with Gymnasium and
+                                Stable-Baselines3 (PyTorch) on LunarLander and Breakout (Atari 2600), tuning replay
+                                buffer, target network and &epsilon;-greedy exploration, and connecting the implementation
+                                to its theory: loss function, Double DQN and Rainbow.</p>
+                            <ul class="project-tech-list">
+                                <li>Python</li>
+                                <li>PyTorch</li>
+                                <li>Stable-Baselines3</li>
+                                <li>Gymnasium</li>
+                            </ul>
+                        </div>
+                    </article>
+
                     <!-- Project New: TMDB API -->
                     <article class="project-card">
                         <div class="project-content">
